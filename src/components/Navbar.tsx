@@ -9,9 +9,13 @@ const navLinks = [
   { label: "Company", href: "#company" },
   { label: "Services", href: "#services" },
   { label: "Leadership", href: "#leadership" },
-  { label: "Blog", href: "#blog" },
+  { label: "Blog", href: null },
   { label: "Contact", href: "#contact" },
 ];
+
+function openBlog() {
+  window.dispatchEvent(new CustomEvent("velath:openBlog"));
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,6 +28,9 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const linkClass =
+    "relative text-gray-400 hover:text-white transition-colors duration-200 text-sm font-medium tracking-widest uppercase group";
 
   return (
     <>
@@ -63,14 +70,18 @@ export default function Navbar() {
           {/* Desktop */}
           <ul className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="relative text-gray-400 hover:text-white transition-colors duration-200 text-sm font-medium tracking-widest uppercase group"
-                >
-                  {link.label}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-300" />
-                </a>
+              <li key={link.label}>
+                {link.href ? (
+                  <a href={link.href} className={linkClass}>
+                    {link.label}
+                    <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-300" />
+                  </a>
+                ) : (
+                  <button onClick={openBlog} className={linkClass}>
+                    {link.label}
+                    <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-300" />
+                  </button>
+                )}
               </li>
             ))}
             <li>
@@ -107,14 +118,23 @@ export default function Navbar() {
         >
           <ul className="flex flex-col gap-1 px-6 py-4">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block py-3 text-gray-300 hover:text-amber-400 transition-colors text-sm font-medium uppercase tracking-widest"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+              <li key={link.label}>
+                {link.href ? (
+                  <a
+                    href={link.href}
+                    className="block py-3 text-gray-300 hover:text-amber-400 transition-colors text-sm font-medium uppercase tracking-widest"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <button
+                    className="block w-full text-left py-3 text-gray-300 hover:text-amber-400 transition-colors text-sm font-medium uppercase tracking-widest"
+                    onClick={() => { setMenuOpen(false); openBlog(); }}
+                  >
+                    {link.label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
