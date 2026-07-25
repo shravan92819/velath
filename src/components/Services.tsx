@@ -162,6 +162,64 @@ export default function Services() {
             </p>
           </div>
         </motion.div>
+
+        {/* Milestone project */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-8 grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-amber-400/20"
+        >
+          {/* Image */}
+          <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+            <Image
+              src="/milestone-plant.jpg"
+              alt="Chemical process skid — a landmark project by Velath Engineering Works"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f1a2e]/30 hidden lg:block" />
+          </div>
+
+          {/* Content */}
+          <div className="bg-[#0f1a2e] p-8 lg:p-12 flex flex-col justify-center">
+            <span className="inline-flex items-center gap-2 mb-6">
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+              <p className="text-amber-400 font-heading font-semibold tracking-[0.25em] uppercase text-xs">
+                Career Milestone
+              </p>
+            </span>
+            <h3 className="font-heading text-2xl lg:text-3xl font-extrabold text-white leading-tight mb-5">
+              Chemical Process Skid &amp; Integrated Dosing System
+            </h3>
+            <div className="space-y-3 text-gray-400 leading-relaxed text-sm mb-8">
+              <p>
+                One of the defining achievements in Velath Engineering&apos;s history — a fully
+                integrated chemical process skid featuring large-capacity stainless steel
+                vessels, a complex multi-line piping manifold, and precision pump packages.
+              </p>
+              <p>
+                Engineered, fabricated, and commissioned entirely under Velath Engineering
+                Works, this project demonstrated the company&apos;s capability to deliver
+                complete, high-complexity process packages for the oil &amp; gas and
+                petrochemical industries — a true milestone in Mr. Prabhakaran&apos;s journey
+                and the company&apos;s rise to regional prominence.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {["Process Skid", "Chemical Dosing", "Stainless Steel Vessels", "Pump Packages", "Oil & Gas"].map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs font-medium px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
