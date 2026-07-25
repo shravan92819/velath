@@ -70,7 +70,7 @@ export default function Footer() {
             Sharjah, United Arab Emirates &nbsp;&bull;&nbsp; Velur, Thrissur, Kerala, India
           </p>
           <p className="text-gray-700 text-xs">
-            Since 1985 · Oil &amp; Gas · Pressure Vessels · Boilers · Heat Exchangers
+            In UAE since 1975 · Est. 1985 · Oil &amp; Gas · Pressure Vessels · Boilers · Heat Exchangers
           </p>
         </div>
       </div>

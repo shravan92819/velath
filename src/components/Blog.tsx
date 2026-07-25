@@ -9,7 +9,7 @@ const chapters = [
     label: "The Early Struggles",
     icon: "🌱",
     body: [
-      "The 1980s were a period filled with challenges and uncertainty. Like many aspiring professionals of that era, Velath Prabhakaran began his career with limited resources but limitless determination. Starting from humble beginnings, he faced financial hardships, unfamiliar environments, and the demanding realities of building a future from scratch.",
+      "On 6th June 1975, a young Velath Prabhakaran stepped onto UAE soil — a moment that would define the rest of his life. He arrived with limited resources but limitless determination, facing financial hardships, an unfamiliar environment, and the demanding realities of building a future from scratch.",
       "Rather than allowing these obstacles to define his path, he viewed every challenge as an opportunity to learn, grow, and improve. Through dedication, discipline, and an unwavering work ethic, he steadily earned the trust and respect of those around him.",
     ],
   },
@@ -18,7 +18,7 @@ const chapters = [
     icon: "🏗️",
     body: [
       "Driven by ambition and a clear vision, Velath Prabhakaran moved to the United Arab Emirates in search of greater opportunities. The journey was far from easy, requiring countless hours of hard work, continuous learning, and the courage to take calculated risks.",
-      "With years of industry experience and an uncompromising commitment to quality, he laid the foundation for Velath Engineering Works in 1985. What began as a modest venture gradually evolved into a trusted engineering company known for delivering reliable solutions, maintaining high standards, and fostering lasting client relationships.",
+      "With a decade of hard-earned experience since his arrival in 1975, and an uncompromising commitment to quality, he laid the foundation for Velath Engineering Works in 1985. What began as a modest venture gradually evolved into a trusted engineering company known for delivering reliable solutions, maintaining high standards, and fostering lasting client relationships.",
     ],
   },
   {
@@ -34,7 +34,7 @@ const chapters = [
     icon: "✨",
     body: [
       "The story of Velath Prabhakaran serves as an inspiration to aspiring entrepreneurs everywhere. His journey demonstrates that success is not determined by where you begin, but by your willingness to persevere through challenges, embrace opportunities, and remain focused on your goals.",
-      "From humble beginnings in the 1980s to leading one of the UAE's respected engineering companies, his legacy reflects the values of resilience, dedication, and visionary leadership. His story continues to inspire future generations to dream boldly, work tirelessly, and believe that determination can transform even the most modest beginnings into remarkable success.",
+      "From his arrival on 6th June 1975 to leading one of the UAE's respected engineering companies, his legacy reflects the values of resilience, dedication, and visionary leadership. His story continues to inspire future generations to dream boldly, work tirelessly, and believe that determination can transform even the most modest beginnings into remarkable success.",
     ],
   },
 ];
@@ -162,7 +162,7 @@ export default function Blog() {
             {/* Stats strip */}
             <div className="mt-16 grid sm:grid-cols-3 gap-6">
               {[
-                { value: "1980s", label: "Journey Began" },
+                { value: "1975", label: "Arrived in UAE" },
                 { value: "1985", label: "Velath Engineering Founded" },
                 { value: "20+", label: "Countries Touched" },
               ].map((stat) => (

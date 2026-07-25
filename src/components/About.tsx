@@ -85,8 +85,8 @@ export default function About() {
                 I was born in Velur, Thrissur, Kerala, to a mother who served as a freedom
                 fighter — a legacy of courage and conviction that has shaped my own values of
                 integrity and perseverance. I carried that spirit with me to the UAE, where I
-                began my entrepreneurial journey in the 1980s, eventually founding Velath
-                Engineering in 1985 and building one of the region&apos;s respected engineering
+                arrived in the UAE on 6th June 1975, beginning a journey that would lead him
+                to found Velath Engineering in 1985 and build one of the region&apos;s respected engineering
                 conglomerates, headquartered in Sharjah.
               </p>
               <p>
