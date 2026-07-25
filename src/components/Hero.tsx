@@ -139,7 +139,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="flex justify-center lg:justify-end"
+          className="flex justify-center lg:justify-end overflow-visible"
         >
           <div className="relative">
             {/* Rotating gradient ring */}
