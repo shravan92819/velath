@@ -44,7 +44,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Name */}
-          <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[0.95] tracking-tight mb-6 overflow-hidden">
+          <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[0.95] tracking-tight mb-6 overflow-hidden">
             {words.map((word, wi) => (
               <span key={word} className="block overflow-hidden">
                 <motion.span
